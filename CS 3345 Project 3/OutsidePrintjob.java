@@ -1,6 +1,6 @@
 public class OutsidePrintjob extends Printjob {
     
-    public OutsidePrintjob(String name, int priority, int pages, char type) {
+    public OutsidePrintjob(String name, int priority, int pages, String type) {
         super(name, priority, pages, type);
     }                                               // constructur uses Printjob's constructur using super
     
