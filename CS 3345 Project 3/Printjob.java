@@ -1,9 +1,9 @@
 public class Printjob implements Comparable<Printjob>{
     private String nm;
     private int user_priority, numpages;
-    private char jobType;                                   // the different data in a Printjob object
+    private String jobType;                                   // the different data in a Printjob object
     
-    public Printjob(String name, int priority, int pages, char type) {
+    public Printjob(String name, int priority, int pages, String type) {
         nm = name;
         user_priority = priority;
         numpages = pages;
@@ -22,7 +22,7 @@ public class Printjob implements Comparable<Printjob>{
         return numpages;
     }
 
-    public char getJobType() {
+    public String getJobType() {
         return jobType;                                     // different methods for retrieving data
     }
 
@@ -33,10 +33,10 @@ public class Printjob implements Comparable<Printjob>{
     @Override
     public int compareTo(Printjob compare) {
         if (this.getPriority() < compare.getPriority()) {
-            return this.getPriority();
+            return -1;
         }
         else {
-            return compare.getPriority();
+            return 1;
         }
     }                                                       // override compareto to return the highest priority 
 }
